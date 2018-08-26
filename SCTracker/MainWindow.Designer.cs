@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.ScriptInOut = new System.Windows.Forms.TabControl();
             this.tab_sc = new System.Windows.Forms.TabPage();
             this.ParameterTable = new System.Windows.Forms.DataGridView();
@@ -43,13 +43,14 @@
             this.binaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.CheckOpcodesMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ExecutionEngineMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AboutMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HelpMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.OpenedFile = new System.Windows.Forms.ToolStripStatusLabel();
             this.ProgressLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.ProgressBar = new System.Windows.Forms.ToolStripProgressBar();
+            this.executeApplicationEngineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ScriptInOut.SuspendLayout();
             this.tab_sc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ParameterTable)).BeginInit();
@@ -96,8 +97,8 @@
             // 
             // ParameterType
             // 
-            dataGridViewCellStyle5.NullValue = "byte[]";
-            this.ParameterType.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.NullValue = "byte[]";
+            this.ParameterType.DefaultCellStyle = dataGridViewCellStyle1;
             this.ParameterType.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
             this.ParameterType.HeaderText = "Type";
             this.ParameterType.Items.AddRange(new object[] {
@@ -143,7 +144,6 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TrackerOutputText.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.TrackerOutputText.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.TrackerOutputText.Location = new System.Drawing.Point(3, 3);
             this.TrackerOutputText.Name = "TrackerOutputText";
             this.TrackerOutputText.ReadOnly = true;
@@ -197,18 +197,19 @@
             // ToolsMenuItem
             // 
             this.ToolsMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.CheckOpcodesMenuItem});
+            this.ExecutionEngineMenuItem,
+            this.executeApplicationEngineToolStripMenuItem});
             this.ToolsMenuItem.Name = "ToolsMenuItem";
             this.ToolsMenuItem.Size = new System.Drawing.Size(47, 20);
             this.ToolsMenuItem.Text = "Tools";
             // 
-            // CheckOpcodesMenuItem
+            // ExecutionEngineMenuItem
             // 
-            this.CheckOpcodesMenuItem.Enabled = false;
-            this.CheckOpcodesMenuItem.Name = "CheckOpcodesMenuItem";
-            this.CheckOpcodesMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.CheckOpcodesMenuItem.Text = "Check Opcodes";
-            this.CheckOpcodesMenuItem.Click += new System.EventHandler(this.CheckOpcodesMenuItem_Click);
+            this.ExecutionEngineMenuItem.Enabled = false;
+            this.ExecutionEngineMenuItem.Name = "ExecutionEngineMenuItem";
+            this.ExecutionEngineMenuItem.Size = new System.Drawing.Size(214, 22);
+            this.ExecutionEngineMenuItem.Text = "Execute ExecutionEngine";
+            this.ExecutionEngineMenuItem.Click += new System.EventHandler(this.CheckOpcodesMenuItem_Click);
             // 
             // AboutMenuItem
             // 
@@ -257,6 +258,14 @@
             this.ProgressBar.Size = new System.Drawing.Size(100, 16);
             this.ProgressBar.Visible = false;
             // 
+            // executeApplicationEngineToolStripMenuItem
+            // 
+            this.executeApplicationEngineToolStripMenuItem.Enabled = false;
+            this.executeApplicationEngineToolStripMenuItem.Name = "executeApplicationEngineToolStripMenuItem";
+            this.executeApplicationEngineToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
+            this.executeApplicationEngineToolStripMenuItem.Text = "Execute ApplicationEngine";
+            this.executeApplicationEngineToolStripMenuItem.Visible = false;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -299,11 +308,12 @@
         private System.Windows.Forms.RichTextBox ScriptText;
         private System.Windows.Forms.ToolStripStatusLabel OpenedFile;
         private System.Windows.Forms.ToolStripMenuItem ToolsMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem CheckOpcodesMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ExecutionEngineMenuItem;
         private System.Windows.Forms.ToolStripMenuItem binaryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem textToolStripMenuItem;
         private System.Windows.Forms.DataGridView ParameterTable;
         private System.Windows.Forms.DataGridViewComboBoxColumn ParameterType;
         private System.Windows.Forms.DataGridViewTextBoxColumn Value;
+        private System.Windows.Forms.ToolStripMenuItem executeApplicationEngineToolStripMenuItem;
     }
 }
